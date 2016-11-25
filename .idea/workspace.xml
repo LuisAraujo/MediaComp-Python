@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f042126-7dce-46db-b987-b4581decc603" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraLineYellow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraNegative.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraReduceBlue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chromakey.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Santa.png" afterPath="$PROJECT_DIR$/images/Santa.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraLineYellow.png" afterPath="$PROJECT_DIR$/images/barbaraLineYellow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraNegative.png" afterPath="$PROJECT_DIR$/images/barbaraNegative.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraReduceBlue.png" afterPath="$PROJECT_DIR$/images/barbaraReduceBlue.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/chromakey.png" afterPath="$PROJECT_DIR$/images/chromakey.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/papertGS.png" afterPath="$PROJECT_DIR$/images/papertGS.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/papertMir.png" afterPath="$PROJECT_DIR$/images/papertMir.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MediaCompPython.iws" />
@@ -51,8 +40,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="340">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -769,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="340">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -45,12 +45,6 @@ path name as a string. No input.
 	- Each take a color and return a slightly darker or lighter (respectively) version of the color.
 - *writePictureTo*
 	- Takes a picture and a file name (string) as input, then writes the picture to the file as a JPEG. (Be sure to end the filename in “.jpg” for the operating system to understand it well.)
-
-### Functions not available*
-- *pickAColor* 
-	- Takes no input, but puts up a color picker. Find the color you want, and the function will return the Color object of what you picked.
-- *repaint* 
-	- Shows again a picture provided as input. No return value.
 - *addText*
 	- Takes a picture, an x position and a y position (two numbers), and some text as a string, which will get drawn into the picture.
 - *addLine*
@@ -60,6 +54,11 @@ path name as a string. No input.
 - *addRectFilled*
 	- Exactly like addRect, but fills the rectangle with black.
 
+### Functions not available*
+- *pickAColor* 
+	- Takes no input, but puts up a color picker. Find the color you want, and the function will return the Color object of what you picked.
+- *repaint* 
+	- Shows again a picture provided as input. No return value.
 
 
 ## 2 - Sounds
