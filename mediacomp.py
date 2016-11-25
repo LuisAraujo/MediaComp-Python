@@ -68,10 +68,12 @@ def setRed(pixel, col):
     pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]) )
 
 def setGreen(pixel, col):
-    return pixel.color.rgb[1]
+    pixel.color.rgb[1] = int(col)
+    pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
 
 def setBlue(pixel,col):
-    return pixel.color.rgb[2]
+    pixel.color.rgb[2] = int(col)
+    pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
 
 def getColor(pixel):
     return pixel.color
