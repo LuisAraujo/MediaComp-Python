@@ -81,7 +81,7 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 
 1. Install Pillow libary
 2. Copy the folder mediacomp for your python folder lib
-3. Import MediaComp form your file (look examples)
+3. Import MediaComp in your file (look examples)
 
 
 ### Examples
