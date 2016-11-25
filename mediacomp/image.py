@@ -1,11 +1,12 @@
-from PIL import Image
 import tkinter as tk
-from tkinter import filedialog
 from math import sqrt
+from tkinter import filedialog
 
-from Color import *
-from Picture import *
-from Pixel import *
+from PIL import Image, ImageDraw
+from mediacomp.picture import *
+from mediacomp.pixel import *
+
+from mediacomp.color import *
 
 def makePicture(path):
     im = Image.open(path)
@@ -68,12 +69,10 @@ def setRed(pixel, col):
     pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]) )
 
 def setGreen(pixel, col):
-    pixel.color.rgb[1] = int(col)
-    pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
+    return pixel.color.rgb[1]
 
 def setBlue(pixel,col):
-    pixel.color.rgb[2] = int(col)
-    pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
+    return pixel.color.rgb[2]
 
 def getColor(pixel):
     return pixel.color
@@ -108,23 +107,24 @@ def makeLighter(color):
 def pickAColor():
     print("Nao implementado")
 
-def writePictureTo(pic, path):
-    print("Nao implementado")
-
 def repaint(pic):
     print("Nao implementado")
 
-def addText():
-    print("Nao implementado")
+def addText(pic, color, x, y, text):
+    draw = ImageDraw.Draw(pic.img)
+    draw.text((x, y), text, fill=(color.rgb[0],color.rgb[1],color.rgb[2]))
 
-def addLine():
-    print("Nao implementado")
+def addLine(pic, color, x1, y1, x2, y2):
+    draw = ImageDraw.Draw(pic.img)
+    draw.line((x1, y1, x2, y2), fill=(color.rgb[0],color.rgb[1],color.rgb[2]))
 
-def addRect():
-    print("Nao implementado")
+def addRect(pic, color, x, y, w, h):
+    draw = ImageDraw.Draw(pic.img)
+    draw.rectangle(((x,y),(w,h)), fill=None, outline = (color.rgb[0],color.rgb[1],color.rgb[2]))
 
-def addRectFilled():
-    print("Nao implementado")
+def addRectFilled(pic, color, x, y, w, h):
+    draw = ImageDraw.Draw(pic.img)
+    draw.rectangle(((x, y), (w, h)), fill=(color.rgb[0], color.rgb[1], color.rgb[2]), outline=(color.rgb[0], color.rgb[1], color.rgb[2]))
 
 
 def writePictureTo(pic,path):

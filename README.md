@@ -45,20 +45,21 @@ path name as a string. No input.
 	- Each take a color and return a slightly darker or lighter (respectively) version of the color.
 - *writePictureTo*
 	- Takes a picture and a file name (string) as input, then writes the picture to the file as a JPEG. (Be sure to end the filename in “.jpg” for the operating system to understand it well.)
+- *addText*
+	- Takes a picture, an x position and a y position (two numbers), and some text as a string, which will get drawn into the picture.
+- *addLine*
+	- Takes a picture, a starting (x, y) position (two numbers), and an ending (x, y) position (two more numbers, four total) and draws a black line from the starting point to the ending point in the picture.
+- *addRect*
+	- Takes a picture, a starting (x, y) position (two numbers), and a width and height (two more numbers, four total) then draws a black rectangle in outline of the given width and height with the position (x, y) as the upper left corner.
+- *addRectFilled*
+	- Exactly like addRect, but fills the rectangle with black.
 
 ### Functions not available*
 - *pickAColor* 
 	- Takes no input, but puts up a color picker. Find the color you want, and the function will return the Color object of what you picked.
 - *repaint* 
 	- Shows again a picture provided as input. No return value.
-- *addText* 
-	- Takes a picture, an x position and a y position (two numbers), and some text as a string, which will get drawn into the picture.
-- *addLine* 
-	- Takes a picture, a starting (x, y) position (two numbers), and an ending (x, y) position (two more numbers, four total) and draws a black line from the starting point to the ending point in the picture.
-- *addRect* 
-	- Takes a picture, a starting (x, y) position (two numbers), and a width and height (two more numbers, four total) then draws a black rectangle in outline of the given width and height with the position (x, y) as the upper left corner.
-- *addRectFilled* 
-	- Exactly like addRect, but fills the rectangle with black.
+
 
 
 
@@ -81,62 +82,69 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 ### How use
 
 1. Install Pillow libary
-2. Copy the folder for your python folder
-3. Import MediaComp (look examples)
+2. Copy the folder mediacomp for your python folder lib
+3. Import MediaComp form your file (look examples)
 
 
 ### Examples
 
-**1 -Greyscale**
+1 -Greyscale
 
 ```python
+from mediacomp.image import  *
+
 picture=makePicture(pickAFile())
+
 for px in getPixels(picture): 
 	newRed = getRed(px) * 0.299
 	newGreen = getGreen(px) * 0.587
 	newBlue = getBlue(px) * 0.114
 	luminance = newRed+newGreen+newBlue
 	setColor(px,makeColor(luminance,luminance,luminance))
+
 show(picture)
 ```
 
 ![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/papertGS.png "Original picture [left] and converted to greyscale[right]")
 
-Original picture [left] and converted to greyscale[right]
-
-**2 - Mirrored**
+2 - Mirrored
 
 ```python
+from mediacomp.image import  *
+
 picture=makePicture(pickAFile())
 mirrorpoint = int(getWidth(picture)/2)
+
 for y in range(1,getHeight(picture)):
 	for x in range(1,mirrorpoint):
 		p = getPixel(picture, x+mirrorpoint,y)
 		p2 = getPixel(picture, mirrorpoint-x,y)
 		setColor(p,makeColor(getRed(p2), getGreen(p2), getBlue(p2)))
+
 show(picture)
 ```
 
 ![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/papertMir.png "Original picture [left] and mirrored along the vertical axis [right]")
 
-Original picture [left] and mirrored along the vertical axis [right]
 
-### Validation (JES vs. This Libary) *
+3 - Line, Rect and Text
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/barbaraLineYellow.png "Add small yellow line on the left")
+```python
+from mediacomp.image import  *
 
-Add small yellow line on the left (JES vs. This Libary)
+picture=makePicture(pickAFile())
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/barbaraReduceBlue.png "Blue erased")
+color = makeColor(255,255,255)
+addRectFilled(picture,  color, 10, 300, 30, 310)
+addText(picture, color, 70, 300, "Seymour Papert")
+addRectFilled(picture, color , 200, 300, 220, 310)
+addLine(picture, color, 30, 300, 200, 300)
+addLine(picture, color, 30, 310, 200, 310)
 
-Blue erased (JES vs. This Libary)
+show(picture)
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/barbaraNegative.png "Negative of the image")
+```
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/papertTxt.png "Original picture [left] and converted to greyscale[right]")
 
-Negative of the image (JES vs. This Libary)
+### Validation (JES vs. This Libary)
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/Santa.png "Mirrored along the vertical axis")
-
-Mirrored along the vertical axis (JES vs. This Libary)
-
-\* Examples by *Introduction to Media Computation: A Multimedia Cookbook in Python* book.

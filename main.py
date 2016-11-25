@@ -1,31 +1,12 @@
-from mediacomp import  *
+from mediacomp.image import  *
 
-source=makePicture(pickAFile())
-mirrorpoint = int(getWidth(source)/2)
-for y in range(1,getHeight(source)):
-	for x in range(1,mirrorpoint):
-		p = getPixel(source, x+mirrorpoint,y)
-		p2 = getPixel(source, mirrorpoint-x,y)
-		setColor(p,makeColor(getRed(p2), getGreen(p2), getBlue(p2)))
+picture=makePicture(pickAFile())
 
-show(source)
-#writePictureTo(pict,"teste")
+color = makeColor(255,255,255)
+addRectFilled(picture,  color, 10, 300, 30, 310)
+addText(picture, color, 70, 300, "Seymour Papert")
+addRectFilled(picture, color , 200, 300, 220, 310)
+addLine(picture, color, 30, 300, 200, 300)
+addLine(picture, color, 30, 310, 200, 310)
 
-'''source=makePicture(pickAFile())
-mirrorpoint = int(getWidth(source)/2)
-for y in range(1,getHeight(source)):
-    for x in range(1,mirrorpoint):
-        p = getPixel(source, x+mirrorpoint,y)
-        p2 = getPixel(source, mirrorpoint-x,y)
-        setColor(p,makeColor(getRed(p2), getGreen(p2), getBlue(p2)))
-
-show(source)'''
-
-'''picture=makePicture(pickAFile())
-mirrorpoint = int(getWidth(picture)/2)
-for y in range(1,getHeight(picture)):
-	for x in range(1,mirrorpoint):
-		p = getPixel(picture, x+mirrorpoint,y)
-		p2 = getPixel(picture, mirrorpoint-x,y)
-		setColor(p,makeColor(getRed(p2), getGreen(p2), getBlue(p2)))
-show(picture)'''
+show(picture)
