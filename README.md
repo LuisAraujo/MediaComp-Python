@@ -30,7 +30,7 @@ path name as a string. No input.
 - *getX, getY* 
 	-  Takes a Pixel object and returns the x or y (respectively) position of where that Pixel is at in the picture.
 - *getRed, getGreen, getBlue* 
-	- Each of these functions takes a Pixel object and returns the value (between 0 and 255) of the amount of redness, greenness, and blueness (respectively) in that pixel.)
+	- Each of these functions takes a Pixel object and returns the value (between 0 and 255) of the amount of redness, greenness, and blueness (respectively) in that pixel.
 - *setRed, setGreen, setBlue
 	- Each of these functions takes a Pixel object and a value (between 0 and 255) and sets the redness, greenness, or blueness (respectively) of that pixel to the given value.
 - *getColor* 
@@ -76,6 +76,7 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 ## Dependence
 
 * You need install the Pillow libary. Look more [Here](http://pillow.readthedocs.io/en/3.0.x/installation.html "Installation of Pillow")
+* You need Tkinter, but it is the standard Python interface. Look mode (https://docs.python.org/2/library/tkinter.html)
 
 ### How use
 
@@ -164,5 +165,10 @@ Negative of the image (JES vs. This Libary)
 ![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/Santa.png "Mirrored along the vertical axis")
 
 Mirrored along the vertical axis (JES vs. This Libary)
+
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/chromakey.png "Mirrored along the vertical axis")
+
+Chromakey (JES vs. This Libary)
 
 \* Examples by *Introduction to Media Computation: A Multimedia Cookbook in Python* book.
