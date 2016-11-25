@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f042126-7dce-46db-b987-b4581decc603" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Color.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Picture.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pixel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mediacomp.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraLineYellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraNegative.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/barbaraReduceBlue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chromakey.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Santa.png" afterPath="$PROJECT_DIR$/images/Santa.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraLineYellow.png" afterPath="$PROJECT_DIR$/images/barbaraLineYellow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraNegative.png" afterPath="$PROJECT_DIR$/images/barbaraNegative.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/barbaraReduceBlue.png" afterPath="$PROJECT_DIR$/images/barbaraReduceBlue.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/chromakey.png" afterPath="$PROJECT_DIR$/images/chromakey.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/papertGS.png" afterPath="$PROJECT_DIR$/images/papertGS.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/papertMir.png" afterPath="$PROJECT_DIR$/images/papertMir.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <ignored path="MediaCompPython.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +51,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="145" column="3" selection-start-line="145" selection-start-column="3" selection-end-line="145" selection-end-column="3" />
+            <state relative-caret-position="153">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -174,6 +179,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MediaCompPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MediaCompPython" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -189,6 +208,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fl43\Documents\GitHub\MediaCompPython\images" />
       <recent name="C:\Users\fl43\Documents\GitHub\MediaCompPython" />
       <recent name="C:\Users\fl43\Documents\GitHub\MediaCompPython\lib" />
     </key>
@@ -749,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="145" column="3" selection-start-line="145" selection-start-column="3" selection-end-line="145" selection-end-column="3" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding />
         </state>
       </provider>

@@ -45,6 +45,12 @@ path name as a string. No input.
 	- Each take a color and return a slightly darker or lighter (respectively) version of the color.
 - *writePictureTo*
 	- Takes a picture and a file name (string) as input, then writes the picture to the file as a JPEG. (Be sure to end the filename in “.jpg” for the operating system to understand it well.)
+
+### Functions not available*
+- *pickAColor* 
+	- Takes no input, but puts up a color picker. Find the color you want, and the function will return the Color object of what you picked.
+- *repaint* 
+	- Shows again a picture provided as input. No return value.
 - *addText*
 	- Takes a picture, an x position and a y position (two numbers), and some text as a string, which will get drawn into the picture.
 - *addLine*
@@ -53,13 +59,6 @@ path name as a string. No input.
 	- Takes a picture, a starting (x, y) position (two numbers), and a width and height (two more numbers, four total) then draws a black rectangle in outline of the given width and height with the position (x, y) as the upper left corner.
 - *addRectFilled*
 	- Exactly like addRect, but fills the rectangle with black.
-
-### Functions not available*
-- *pickAColor* 
-	- Takes no input, but puts up a color picker. Find the color you want, and the function will return the Color object of what you picked.
-- *repaint* 
-	- Shows again a picture provided as input. No return value.
-
 
 
 
@@ -91,7 +90,7 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 1 -Greyscale
 
 ```python
-from mediacomp.image import  *
+from mediacomp.functions import *
 
 picture=makePicture(pickAFile())
 
@@ -105,12 +104,12 @@ for px in getPixels(picture):
 show(picture)
 ```
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/papertGS.png "Original picture [left] and converted to greyscale[right]")
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/papertGS.png "Original picture [left] and converted to greyscale[right]")
 
 2 - Mirrored
 
 ```python
-from mediacomp.image import  *
+from mediacomp.functions import *
 
 picture=makePicture(pickAFile())
 mirrorpoint = int(getWidth(picture)/2)
@@ -124,8 +123,7 @@ for y in range(1,getHeight(picture)):
 show(picture)
 ```
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/papertMir.png "Original picture [left] and mirrored along the vertical axis [right]")
-
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/papertMir.png "Original picture [left] and mirrored along the vertical axis [right]")
 
 3 - Line, Rect and Text
 
@@ -148,3 +146,24 @@ show(picture)
 
 ### Validation (JES vs. This Libary)
 
+Original picture [left] and mirrored along the vertical axis [right]
+
+### Validation (JES vs. This Libary) *
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/barbaraLineYellow.png "Add small yellow line on the left")
+
+Add small yellow line on the left (JES vs. This Libary)
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/barbaraReduceBlue.png "Blue erased")
+
+Blue erased (JES vs. This Libary)
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/barbaraNegative.png "Negative of the image")
+
+Negative of the image (JES vs. This Libary)
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/Santa.png "Mirrored along the vertical axis")
+
+Mirrored along the vertical axis (JES vs. This Libary)
+
+\* Examples by *Introduction to Media Computation: A Multimedia Cookbook in Python* book.
