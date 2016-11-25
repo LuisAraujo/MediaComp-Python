@@ -2,11 +2,11 @@ from mediacomp.image import  *
 
 picture=makePicture(pickAFile())
 
-color = makeColor(255,255,255)
-addRectFilled(picture,  color, 10, 300, 30, 310)
-addText(picture, color, 70, 300, "Seymour Papert")
-addRectFilled(picture, color , 200, 300, 220, 310)
-addLine(picture, color, 30, 300, 200, 300)
-addLine(picture, color, 30, 310, 200, 310)
+for px in getPixels(picture):
+    newRed = getRed(px) * 0.299
+    newGreen = getGreen(px) * 0.587
+    newBlue = getBlue(px) * 0.114
+    luminance = newRed+newGreen+newBlue
+    setColor(px,makeColor(luminance,luminance,luminance))
 
 show(picture)
