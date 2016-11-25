@@ -89,7 +89,7 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 1 -Greyscale
 
 ```python
-from mediacomp.functions import *
+from mediacomp.image import  *
 
 picture=makePicture(pickAFile())
 
@@ -108,7 +108,7 @@ show(picture)
 2 - Mirrored
 
 ```python
-from mediacomp.functions import *
+from mediacomp.image import  *
 
 picture=makePicture(pickAFile())
 mirrorpoint = int(getWidth(picture)/2)
