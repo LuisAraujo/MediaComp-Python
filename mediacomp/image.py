@@ -16,7 +16,11 @@ def makePicture(path):
 
 def show(pic):
     if(pic != None):
-        pic.img.show()
+        win = tk.Tk()
+        win.size = [pic.img.size[0] + 50, pic.img.size[1] + 50]
+        CanvasShowImage(win, pic)
+        win.mainloop()
+
 
 def pickAFile():
     root = tk.Tk()
@@ -80,18 +84,18 @@ def getBlue(pixel):
         return pixel.color.rgb[2]
 
 def setRed(pixel, color):
-    if ((pixel != None) and (type(pixel) == Pixel) and (color != None) and (type(color) == Color) ):
-        pixel.color.rgb[0] = int(color)
+    if ((pixel != None) and (type(pixel) == Pixel)):
+        pixel.color.rgb[0] = int(color%256)
         pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]) )
 
 def setGreen(pixel, color):
-    if ((pixel != None) and (type(pixel) == Pixel) and (color != None) and (type(color) == Color)):
-        pixel.color.rgb[1] = int(color)
+    if ((pixel != None) and (type(pixel) == Pixel)):
+        pixel.color.rgb[1] =  int(color%256)
         pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
 
 def setBlue(pixel,color):
-    if ((pixel != None) and (type(pixel) == Pixel) and (color != None) and (type(color) == Color)):
-        pixel.color.rgb[2] = int(color)
+    if ((pixel != None) and (type(pixel) == Pixel)):
+        pixel.color.rgb[2] =  int(color%256)
         pixel.pic.img.putpixel((pixel.xy[0], pixel.xy[1]), (pixel.color.rgb[0], pixel.color.rgb[1], pixel.color.rgb[2]))
 
 def getColor(pixel):

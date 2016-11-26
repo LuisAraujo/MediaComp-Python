@@ -169,3 +169,37 @@ class CanvasExplore:
         self.canvas.create_line(x, y-2, x, y-6, fill="yellow")
         self.canvas.create_line(x-2, y, x-6, y, fill="yellow")
 
+
+
+
+
+
+class CanvasShowImage:
+    def __init__(self,raiz, pic):
+        #picture
+        self.pic = pic
+        raiz.title(pic.filename)
+        filespath = os.path.dirname(os.path.abspath(__file__))
+
+        self.widget = tk.Frame(raiz)
+        self.widget.pack()
+
+        #creating path gif file
+        path = ""
+        #same path jpg file
+        pathS = self.pic.filename.split("/");
+        for i in range(0, len(pathS)-1):
+            path+=pathS[i]+"/"
+
+        #add name git file
+        path += "imagetemp.gif"
+        #save
+        self.pic.img.save(path)
+
+        self.image = tk.PhotoImage(master = self.widget, file=path)
+        self.canvas = tk.Canvas(self.widget, width=self.pic.img.size[0], height=self.pic.img.size[1])
+        self.canvas.create_image(0, 0, anchor=tk.NW, image=self.image)
+        self.canvas.photo = self.image
+        self.canvas.pack(side=tk.LEFT)
+
+

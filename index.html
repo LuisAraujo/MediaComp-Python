@@ -1,35 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MediaComp Python</title>
-    <style>
-        body{
-            background-color: rgb(38, 113, 145);
-            color: #fff;
-        }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap Core CSS -->
+  <link href="style/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
-<h1>mediacomp - biblioteca python</h1>
-<div>
-    A biblioteca <i>mediacomp</i> é uma implementação do MediaComp em Python nativo.
-</div>
-<div>
-    Computação com Mídias, ou </i>MediaComp, é uma abordagem contextualizada para introdução à progração com o tema de manipulação de mídias (imagens, sons, videos e textos).
-    O MediaComp foi criado por pesquisadores do GeorgiaTech em Jython, juntamente com uma IDE própria para o ensino: JES.
-</div>
-
-<div>
-    Você pode baixar a biblioteca aqui.
-    <br>
-    Apostila
-    <br>
-    Exercícios
-    <br>
-    Slides
-</div>
 
 
-</body>
+  <body style="padding: 10px">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-bottom: 10px solid #fff">
+        <div class="container">
+
+
+            <div class="navbar-header page-scroll">
+                <h2><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Computação com Mídias</h2>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  style="float:right;" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul  class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li  class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#home"><h4>home</h4></a>
+                    </li>
+                    <li>
+                        <a   class="page-scroll" href="#biblioteca"><h4>biblioteca</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#exemplos"><h4>exemplos</h4></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#aprenda"><h4>aprenda</h4></a>
+                    </li>
+                    <li>
+                        <a  class="page-scroll" href="#sobre"><h4>sobre</h4></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+  <div class="container" style="margin-top: 50px">
+    <h3> O que é MediaComp? </h3>
+    <div>
+        Computação com Mídias, ou <i>MediaComp</i>, é uma abordagem contextualizada para introdução à progração através de manipulação de mídias (imagens, sons, videos e textos).
+        A abordagem <i>MediaComp</i> foi criado por pesquisadores do GeorgiaTech, assim com um conjunto de funções e uma IDE chamada Jython Environment for Students (JES).
+    </div>
+    <h3> Nossa Biblioteca </h3>
+    <div>
+      Ao contrário do ambiente desenvolvido no GeorgiaTech, nossa biblioteca foi desenvolvida em Python nativo e funciona nas principais IDEs Python.
+      Atualmente na versão alfa a biblioteca dispõe de todos os métodos de manipualção de imagens e da Picture <Tool class=""></Tool>
+    </div>
+
+  </div>
+  <div class="container" style="margin-top: 50px">
+    <h3> Galeria </h3>
+    <div class="bs-example" data-example-id="simple-thumbnails">
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <a href="#" class="thumbnail">
+                    <img alt="100%x180" data-src="holder.js/100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU4OWYwMTgzNTQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTg5ZjAxODM1NCI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6"> <a href="#" class="thumbnail">
+                <img alt="100%x180" data-src="holder.js/100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU4OWYwMTdkY2YgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTg5ZjAxN2RjZiI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+            </a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <a href="#" class="thumbnail">
+                <img alt="100%x180" data-src="holder.js/100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU4OWYwMWJjNGIgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTg5ZjAxYmM0YiI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                </a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <a href="#" class="thumbnail">
+                    <img alt="100%x180" data-src="holder.js/100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU4OWYwMWQzODEgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTg5ZjAxZDM4MSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+      <!-- MODAL SOBRE-->
+      <div class="modal fade" id="modal-erro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h2><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                      Erro 404 - Not found</h2>
+                  </div>
+                  <div class="modal-body">
+
+                    Ocorreu um erro ao tentar acessar os arquvos. Por favor, verifique o diretório!
+
+                  </div>
+                  <div class="modal-footer">
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
+

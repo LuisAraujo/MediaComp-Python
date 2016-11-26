@@ -1,5 +1,8 @@
 from mediacomp.image import  *
 
 picture=makePicture(pickAFile())
-explore(picture)
 
+for p in getPixels(picture):
+    setRed(p, 500)
+
+explore(picture)
