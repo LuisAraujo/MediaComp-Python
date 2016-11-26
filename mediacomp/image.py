@@ -1,12 +1,9 @@
-import tkinter as tk
 from math import sqrt
-from tkinter import filedialog
-
 from PIL import Image, ImageDraw
 from mediacomp.picture import *
 from mediacomp.pixel import *
-
 from mediacomp.color import *
+from mediacomp.GUI.canvas import *
 
 def makePicture(path):
     pic = None
@@ -24,7 +21,10 @@ def show(pic):
 def pickAFile():
     root = tk.Tk()
     root.withdraw()
-    return filedialog.askopenfilename()
+    r = filedialog.askopenfilename()
+    root.destroy()
+    return r
+
 
 def getWidth(pic):
     if (pic != None):
@@ -160,3 +160,10 @@ def writePictureTo(pic,path):
     if( (filename[len(filename)-1] != "jpeg") or (filename[len(filename)-1] != "JPEG")):
         pic.img.save(path+".jpeg", 'JPEG')
 
+def explore(pic):
+
+    if((pic != None) and (type(pic) == Picture)):
+        instancia = tk.Tk()
+        instancia.size = [pic.img.size[0]+50, pic.img.size[1]+50]
+        CanvasExplore(instancia, pic)
+        instancia.mainloop()

@@ -60,6 +60,11 @@ path name as a string. No input.
 - *repaint* 
 	- Shows again a picture provided as input. No return value.
 
+### Picture Tool (in development)
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/interfaceExploreImg.png "Add small yellow line on the left")
+
+Picture Tool (JES vs. This Libary)
 
 ## 2 - Sounds
 ### Functions available*
