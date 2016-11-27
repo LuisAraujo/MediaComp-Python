@@ -5,9 +5,6 @@ from mediacomp.pixel import *
 from mediacomp.color import *
 from mediacomp.GUI.canvas import *
 
-
-global win
-
 def makePicture(path):
     pic = None
     try:
