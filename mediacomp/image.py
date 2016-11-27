@@ -5,6 +5,9 @@ from mediacomp.pixel import *
 from mediacomp.color import *
 from mediacomp.GUI.canvas import *
 
+
+global win
+
 def makePicture(path):
     pic = None
     try:
@@ -16,11 +19,10 @@ def makePicture(path):
 
 def show(pic):
     if(pic != None):
-        win = tk.Tk()
-        win.size = [pic.img.size[0] + 50, pic.img.size[1] + 50]
-        CanvasShowImage(win, pic)
-        win.mainloop()
+        CanvasShowImage(pic)
 
+def repaint(pic):
+    print("No implemented yet")
 
 def pickAFile():
     root = tk.Tk()
@@ -135,8 +137,6 @@ def makeLighter(color):
 def pickAColor():
     print("Nao implementado")
 
-def repaint(pic):
-    print("Nao implementado")
 
 def addText(pic, color, x, y, text):
     if ((pic != None) and (type(pic) == Picture) and (color != None) and (type(color) == Color)):
@@ -165,9 +165,6 @@ def writePictureTo(pic,path):
         pic.img.save(path+".jpeg", 'JPEG')
 
 def explore(pic):
-
     if((pic != None) and (type(pic) == Picture)):
-        instancia = tk.Tk()
-        instancia.size = [pic.img.size[0]+50, pic.img.size[1]+50]
-        CanvasExplore(instancia, pic)
-        instancia.mainloop()
+        CanvasExplore(pic)
+        

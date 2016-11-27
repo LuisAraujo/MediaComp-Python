@@ -1,9 +1,13 @@
 import tkinter as tk
 from tkinter import filedialog
 import os
+import threading
 
 class CanvasExplore:
-    def __init__(self,raiz, pic):
+    def __init__(self,pic):
+        raiz = tk.Tk()
+        raiz.size = [pic.img.size[0] + 50, pic.img.size[1] + 50]
+
         #picture
         self.pic = pic
         raiz.title(pic.filename)
@@ -119,6 +123,7 @@ class CanvasExplore:
         self.canvas.pack(side=tk.LEFT)
         self.canvas.bind('<Button-1>', self.clickCanvas)
 
+        raiz.mainloop()
 
     def clickCanvas(self, event):
 
@@ -174,32 +179,50 @@ class CanvasExplore:
 
 
 
-class CanvasShowImage:
-    def __init__(self,raiz, pic):
-        #picture
+class CanvasShowImage():
+    def __init__(self, pic):
         self.pic = pic
-        raiz.title(pic.filename)
+        self.raiz = tk.Tk()
+        self.raiz.size = [self.pic.img.size[0] + 50, self.pic.img.size[1] + 50]
+        self.raiz.protocol('WM_DELETE_WINDOW', self.closeWin)
+
+        # picture
+        self.raiz.title(self.pic.filename)
         filespath = os.path.dirname(os.path.abspath(__file__))
 
-        self.widget = tk.Frame(raiz)
+        self.widget = tk.Frame(self.raiz)
         self.widget.pack()
 
-        #creating path gif file
+        # creating path gif file
         path = ""
-        #same path jpg file
+        # same path jpg file
         pathS = self.pic.filename.split("/");
-        for i in range(0, len(pathS)-1):
-            path+=pathS[i]+"/"
+        for i in range(0, len(pathS) - 1):
+            path += pathS[i] + "/"
 
-        #add name git file
+        # add name git file
         path += "imagetemp.gif"
-        #save
+        # save
         self.pic.img.save(path)
 
-        self.image = tk.PhotoImage(master = self.widget, file=path)
+        self.image = tk.PhotoImage(master=self.widget, file=path)
         self.canvas = tk.Canvas(self.widget, width=self.pic.img.size[0], height=self.pic.img.size[1])
         self.canvas.create_image(0, 0, anchor=tk.NW, image=self.image)
         self.canvas.photo = self.image
         self.canvas.pack(side=tk.LEFT)
+        self.raiz.mainloop()
 
+
+    def closeWin(self):
+        print("ok")
+        self.raiz.destroy()
+
+    @classmethod
+    def getInstance(cls, pic):
+        if(cls.instance == None):
+            c = CanvasShowImage()
+            c.setPic(pic)
+            return c
+        else:
+            return  cls.intance()
 
