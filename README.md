@@ -215,8 +215,16 @@ A Multimedia Cookbook in Python* book. This book is available [here](http://cowe
 
 ### How use
 
-1. Install Pillow libary
+1. Install all dependence libary (Pillow, PyAudio, Numpy ...) 
 2. Copy the folder mediacomp for your python folder lib
 3. Import MediaComp in your file (look examples)
+
+Note: You can check whether you have the libary installed. Make this in console:
+
+*\>\>\>python -c "import pillow*
+
+*\>\>\>python -c "import pyaudio"*
+
+*\>\>\>python -c "import numpy*
 
 
