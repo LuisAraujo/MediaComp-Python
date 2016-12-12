@@ -62,7 +62,7 @@ path name as a string. No input.
 
 ### Picture Tool (in development)
 
-![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/interfaceExploreImg.png "Add small yellow line on the left")
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/interfaceExploreImg.png "Picture Tool")
 
 Picture Tool (JES vs. This Libary)
 
@@ -189,6 +189,10 @@ Chromakey (JES vs. This Libary)
 ### Examples
 ### Validation (JES vs. This Libary)*
 ### Sound Tool (in development)
+
+![Tela Principal](https://github.com/LuisAraujo/MediaCompPython/blob/master/images/soundtool.png "Sound Tool")
+
+Picture Tool (JES vs. This Libary)
 
 
 ## 3 - Movies

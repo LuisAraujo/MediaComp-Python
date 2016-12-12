@@ -1,6 +1,6 @@
 from mediacomp.image import  *
 
-imagem=makePicture(pickAFile())
+#imagem=makePicture(pickAFile())
 
 
 def choromakwy(source, bg):
@@ -16,16 +16,16 @@ def choromakwy(source, bg):
 
     return source
 
-fundo=makePicture(pickAFile())
+#fundo=makePicture(pickAFile())
 
-for x in range(1, getWidth(imagem)):
+'''for x in range(1, getWidth(imagem)):
     for y in range(1, getHeight(imagem)):
         p = getPixel(imagem, x, y)
         if (getRed(p) + getBlue(p) < getGreen(p)):
             setColor(p, getColor(getPixel(fundo, x, y)))
 
-show(imagem)
-
+#show(imagem)
+'''
 
 def blackwhite(source):
     # source should have something in front of blue, bg is the new background
@@ -64,7 +64,7 @@ def colage(source1, source2):
 #show(colage(source2, source1))
 
 
-#picture=makePicture("C:/Users/fl43/Desktop/rosa.jpg")
+picture=makePicture("C:/Users/fl43/Desktop/rosa.jpg")
 
 def greyscale(picture):
     for px in getPixels(picture):
@@ -101,4 +101,5 @@ def lessRed(picture):
 
 #show(lessRed(picture))
 
+explore(picture)
 #from mediacomp.image import  *

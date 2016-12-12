@@ -1,7 +1,7 @@
 import pyaudio
 import wave
-import numpy as np
 import struct
+from mediacomp.samples import *
 
 class Sound:
     filename =""
@@ -10,36 +10,54 @@ class Sound:
     sampwidth = 0
     dataString = []
     samples = None
+    duration = 0
 
     def __init__(self, filename):
         self.filename = filename
         audio = wave.open(self.filename, 'rb')
+
+        astr = audio.readframes(audio.getnframes())
+        self.dataString = list(struct.unpack("%ih" % (audio.getnframes() * audio.getnchannels()), astr))
         self.sampleRate = audio.getframerate()
+        print(len(self.dataString))
+
         self.channels = audio.getnchannels()
         self.sampwidth = audio.getsampwidth()
-        data = audio.readframes(audio.getnframes())
-        self.dataString = np.fromstring(data, 'Int16')
-        self.samples = Samples(self)
         audio.close()
+        self.samples = Samples(self)
+        self.duration =  len(self.samples.values)/ 22050.0
+        #print(audio.getparams(), self.dataString[len(self.dataString)-1])
+
 
     def __str__(self):
         return "Sound file: {} number of samples: {} ".format(self.filename, len(self.samples.values))
 
     def play(self, rateFactor, duration):
-        audio = wave.open(self.filename, 'rb')
+
+        wavef = wave.open(self.filename+'-temp.wav', 'w')
+        wavef.setnchannels(self.channels)  # mono
+        wavef.setsampwidth(self.sampwidth)
+        wavef.setframerate(self.sampleRate)
+        a = self.dataString
+        for i in range(0, len(a)):
+            data2 = struct.pack('<h', int(a[i]))
+            wavef.writeframesraw(data2)
+
+        wavef.close()
+
+        audio = wave.open(self.filename+'-temp.wav', 'rb')
         pa = pyaudio.PyAudio()
         stream = pa.open(format=pa.get_format_from_width(audio.getsampwidth()), channels=audio.getnchannels(),
                          rate=int(audio.getframerate()*rateFactor), output=True)
 
-        data = audio.readframes(audio.getnframes())
-        n = bytes(self.dataString)
+        n = audio.readframes(audio.getnframes())
         stream.write(n)
         audio.close()
         stream.close()
         pa.terminate()
 
     def setSampleValue(self, index, value):
-        self.dataString[index] = str(value)
+        self.dataString[index] = value
 
     def save(self, path):
         wavef = wave.open(path, 'w')
@@ -52,39 +70,3 @@ class Sound:
             wavef.writeframesraw(data2)
 
 
-class Samples:
-    values = []
-    sound = None
-
-    def __init__(self,sound):
-        self.sound = sound
-        for i in range(0, len(self.sound.dataString)):
-            self.values.append(Sample(self, i, self.sound.dataString[i]))
-
-    def __iter__(self):
-        return iter(self.values)
-
-    def __len__(self):
-        return len(self.values)
-
-    def __getitem__(self, i):
-        return self.values[i]
-
-
-class Sample:
-    samples = None
-    value = 0
-    index = 0
-
-    def __init__(self,samples, index, value):
-        self.samples = samples
-        self.index = index
-        self.value = int(value)
-
-    def __str__(self):
-        return "Sample at {} with {} ".format(self.index, self.value)
-
-
-    def changeValue(self, value):
-        self.value = value
-        self.samples.sound.setSampleValue(self.index, value)

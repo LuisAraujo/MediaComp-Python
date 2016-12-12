@@ -155,7 +155,6 @@ def addRectFilled(pic, color, x, y, w, h):
         draw = ImageDraw.Draw(pic.img)
         draw.rectangle(((x, y), (w, h)), fill=(color.rgb[0], color.rgb[1], color.rgb[2]), outline=(color.rgb[0], color.rgb[1], color.rgb[2]))
 
-
 def writePictureTo(pic,path):
     filename = str.split(path, ".")
     if( (filename[len(filename)-1] != "jpeg") or (filename[len(filename)-1] != "JPEG")):
@@ -163,5 +162,5 @@ def writePictureTo(pic,path):
 
 def explore(pic):
     if((pic != None) and (type(pic) == Picture)):
-        CanvasExplore(pic)
+        CanvasExploreImage(pic)
         
